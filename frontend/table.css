@@ -1,0 +1,41 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.table-body {
+  height: 240px;
+  overflow: hidden;
+  border: 1px solid #bfbfbf;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #d8d8d8;
+  text-align: center;
+}
+
+thead {
+  background: #f3f3f3;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+tbody {
+  display: block;
+  will-change: transform;
+}
+
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}

@@ -3,6 +3,8 @@ const mariadb = require("mariadb");
 const cors = require("cors");
 
 const app = express();
+app.use(express.static("frontend"));
+
 app.use(cors());
 
 const pool = mariadb.createPool({
@@ -16,7 +18,7 @@ const pool = mariadb.createPool({
 
 app.get("/users", async (req, res) => {
   let conn;
-  
+
   try {
     conn = await pool.getConnection();
     const rows = await conn.query(`
